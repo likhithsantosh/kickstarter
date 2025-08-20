@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('./Backend/models/user');
-const auth = require('./Backend/middleware/auth');
-const Post = require('./Backend/models/Post');
+const User = require('./Backend/models/user.js');
+const auth = require('./Backend/middleware/auth.js');
+const Post = require('./Backend/models/Post.js');
 const bodyparser = require('body-parser');
 
 const app = express();
@@ -158,5 +158,8 @@ app.get('/users/posts', auth, async(req, res)=>{
         res.status(500).json({message: "server error"});
     }
 });
+app.get('/', async(req, res)=>{
+    console.log("Api is running");
+})
 
 app.listen(3000)
