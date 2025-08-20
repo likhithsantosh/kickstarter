@@ -16,7 +16,7 @@ app.use(express.static('public'));
 
 const JWT_SECRET = "9849793081";
 
-mongoose.connect("mongodb://localhost:27017/websiteA")
+mongoose.connect("mongodb+srv://urslikhithsantosh:goli9849@cluster0.plkhk0v.mongodb.net/?")
 .then(() => console.log("Connected to MongoDB"))
 .catch((err) => console.log(err));
 
